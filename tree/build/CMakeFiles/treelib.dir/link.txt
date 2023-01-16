@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libtreelib.dylib -install_name @rpath/libtreelib.dylib CMakeFiles/treelib.dir/tree.cpp.o 

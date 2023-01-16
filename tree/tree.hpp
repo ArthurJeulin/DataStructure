@@ -1,5 +1,5 @@
 // **********************************************************
-//      2022 : Arthur JEULIN
+//      2023 : Arthur JEULIN
 //      DataStructure : Learn Tree
 //      Created by Arthur JEULIN on 01/15/2023.
 // **********************************************************
@@ -14,43 +14,32 @@ class Node{
 		Node* leftChild;
 		Node* rightChild;
 		int data;
-		Node(int data){
-				this->data = data;
-				leftChild = 0;
-				rightChild = 0;
-        }
-		void Display(){
-			std::cout<< this->data<< std::endl;
-		}
+		// Initialize left and right child to 0
+		Node(int data);
+		// Display the data of the current node
+		void Display();
 };
 
 class Tree{
 	public :
+	// attribut that reference to the root of the tree
+	//Pointe //link to the Node/root above him
 		Node* root;
-		Tree(){
-			root = 0;
-		}
-		Node* Find(int key){
-				Node* current = root;
-				while(current->data!=key){
-					if(key<current->data){
-						current = current->leftChild;
-						}
-					else{
-						current = current->rightChild;
-					}
-				if(current ==0)
-					return 0;
-				}
-				return current;
-		}
-		void DisplayInOrder(Node *localRoot){
-				if(localRoot!=0){
-					DisplayInOrder(localRoot->leftChild);
-					localRoot->Display();
-					DisplayInOrder(localRoot->rightChild);
-				}
-		}
+		// Constructeur
+		Tree();
+		Node* Find(int key);
+		void DisplayInOrder(Node *localRoot);
+	/*
+	Inserting a Node
+		- The first node to be inserted into the tree will become the root node.
+		- The second insertion will compare its key value with that of root. 
+			If greater then it becomes the roots right child 
+			If less the left child.
+		- Subsequent insertions compare their key values with the root and then its left or right child depending upon it beging less than or greater than the root’s key value.
+		- The process continues down the tree until an appropriate left or right child with a null value is fonund. 
+			At this point the new node is assigned to the child.
+	*/
+		void Insert(int key);
 
 };
 

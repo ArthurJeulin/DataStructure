@@ -1,5 +1,5 @@
 // **********************************************************
-//      2022 : Arthur JEULIN
+//      2023 : Arthur JEULIN
 //      DataStructure : Learn Tree
 //      Created by Arthur JEULIN on 01/15/2023.
 // **********************************************************
@@ -21,13 +21,26 @@ Implementation of a Binary Search Tree in C++
             -data : String
 */
 
-
-#include "tree.hpp"
 #include <iostream>
+#include "tree.hpp"
+#include <random>
 
 int main(){
+    //number of element in the tree :
+    int n = 15;
+    int i = 0;
+    //initialize the tree
+    Tree arbre;
+    while(i!=n){
+        std::random_device rd; // sedd for the random number engine
+        std::mt19937 gen(rd()); // standad mersenne_twister_engine seeded with rd()
 
-
+        std::uniform_int_distribution<> dis(1,100);
+        int random_num = dis(gen);
+        arbre.Insert(random_num);
+        i++;
+    }
+    arbre.DisplayInOrder(arbre.root);
 
     return 0;
 }

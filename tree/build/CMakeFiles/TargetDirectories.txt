@@ -1,4 +1,0 @@
-/Users/arthur/DataStructure/tree/build/CMakeFiles/treelib.dir
-/Users/arthur/DataStructure/tree/build/CMakeFiles/Tree.dir
-/Users/arthur/DataStructure/tree/build/CMakeFiles/edit_cache.dir
-/Users/arthur/DataStructure/tree/build/CMakeFiles/rebuild_cache.dir

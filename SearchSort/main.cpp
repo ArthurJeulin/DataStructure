@@ -80,18 +80,57 @@ Sort Algorithms :
     {5,3,4,2} and swap with the first -gives {2,3,4,5}
     Giving {1,2,3,4,5}
 
+    Bublle Sort
+    Make repeated passes through a list of items,
+    echanging adgacent items if necessary.
+    At each pass, the largest unsroted item will be pushed in tis proper place.
+    Efficiency Average and worst O(n^2)
+    Bubble Sort Explanation :
+    Compared pairs of adjacent elements of the sequence, if they are in the xrong order swap them and do 
+    this till there are no more swapping's to do.
+    ex : Sort an array {5,3,1,4,2} using Bubble Sort.
+        Compare first two, as 5>3, they are swapped
+        . {3,5,1,4,2} Again compared next two, as 5>1, they are swapped
+        . {3,1,5,4,2} Keep swapping
+        . Until the first pass is complete {3,1,4,2,5}
+        . Second Pass : compare 3 & 1, as 3>1 they are swapped
+        . {1,3,4,2,5} compared 3,4 they are in correct order
+        . Compared 4 & 2 and swap compared 4 & 5 no swap
+        . So far we have {1,3,2,4,5}
+        . Final Pass : Compared 1 & 3 no swap. Compared 3&2 and swap
+    
+    Search Algorithms
+     . Key is the value being searched for
+     . Some algorithms assume the data is sorted
+     . The search function returns the index of the key within the array if found
+     . Returns -1 if the key is not found.
+
+    Linear Search (Sequantial Search)
+     . Each element is checked in sequence until a match is found.
+     . Efficiency O(n).
+     . Only suitable for small data sets. 
+
+    Binary Search
+     . Searches sorted data only
+     . The key is compared to the middle value if no matchec and the key is less than the value the action is
+     repeated on the left portion of the array ortherwise the right.
+     . Efficiency O(log(n))
+     . Suiteable for large data sets
+
+
 */
 
 template<typename T>
-void swap(T& a, T& b){
+void swap(T& a, T& b)
+{
     T temp = b;
     b = a;
     a = temp;
 }
 
-
 template<typename T>
-void swap(T* a, T* b){
+void swap(T* a, T* b)
+{
     T temp = *b;
     *b = *a;
     *a = temp;
@@ -100,7 +139,6 @@ void swap(T* a, T* b){
 template<typename T>
 void Sort(std::vector<T>& tableau, size_t element)
 {
-
     if(tableau.size() > element){
         for (size_t i = element; i < tableau.size();++i)
         {
@@ -135,6 +173,93 @@ void SelectionSort(std::vector<T>& tableau)
     }
 }
 
+
+template<typename T>
+void BubbleSort(std::vector<T>& monTab)
+{
+
+    for (size_t j = 0; j < monTab.size(); ++j)
+    {
+        //Ici on check si la variable à droite est plus grande
+        //Si la variable à droit est plus grande on swap
+        for (size_t i = 0; i < monTab.size()-1; ++i)
+        {
+            if(monTab[i]>monTab[i+1])
+            {
+                swap(monTab[i],monTab[i+1]);
+            }
+        }
+    }
+}
+
+template<typename T>
+void EnhancedBubbleSort(std::vector<T>& monTab)
+{
+    bool sorted = false;
+    size_t lastUnsorted = monTab.size()-1;
+    while (!sorted)
+    {   
+        sorted = true;
+        //Ici on check si la variable à droite est plus grande
+        //Si la variable à droit est plus grande on swap
+        for (size_t i = 0; i < lastUnsorted; ++i)
+        {
+            //On décale vers la droite la valeur la plus grande
+            if(monTab[i]>monTab[i+1])
+            {
+                swap(monTab[i],monTab[i+1]);
+                sorted = false;
+            }
+        }
+        --lastUnsorted;
+    }
+}
+
+//Return the index of the key value if found, whereas -1;
+template<typename T>
+T LinearSearch(const std::vector<T>& tab, const T key)
+{
+    for (size_t i = 0; i < tab.size(); ++i)
+    {
+        if(tab[i]==key)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+template<typename T>
+int BinarySearch(const std::vector<T> tab, const T key)
+{
+    size_t middle;
+    if(tab.size()%2==0)
+    {
+        middle = tab.size()/2 ;
+    }
+    else
+    {
+        middle = tab.size()/2 + 0.5;
+    }
+   // std::cout << " Middle value : " << middle << " tab value : "<<tab[middle]<< std::endl;
+    
+    if(key == tab[middle]){
+        return middle;
+    }
+    if(key < tab[middle] )
+    {
+        // repeat the same on the left portion
+        std::vector<int> sousVecteur(tab.begin(),tab.begin()+middle);
+        return BinarySearch<T>(sousVecteur,key);
+    }
+    if(key > tab[middle] )
+    {
+        // repeat the same on the right portion
+        std::vector<int> sousVecteur(tab.begin() + middle,tab.end());
+        return middle + BinarySearch<T>(sousVecteur,key);
+    }
+    return -1;
+}
 int main(){
 
 
@@ -147,31 +272,61 @@ int main(){
     swap<int>(&a,&b);
     std::cout << "a :"<<a<< " b :"<<b<<"\n";
 /*------------------------------------------*/
-std::vector<int> monTab {4,5,6,1,3,9,4,8,2,7};
-//Sort(monTab,0);
-SelectionSort(monTab);
-for(auto element : monTab){
-    std::cout << element<< " ";
-}
-std::cout << std::endl;
+    std::vector<int> monTab {4,5,6,1,3,9,4,8,2,7};
+    //Sort(monTab,0);
+    SelectionSort(monTab);
+    for(auto element : monTab){
+        std::cout << element<< " ";
+    }
+    std::cout << std::endl;
 
 /*------------------------------------------*/
-std::vector<int> data;
-for (size_t i = 0; i < 1000; ++i)
-{
-    data.push_back(rand() % 101 );
-}
-for(auto element : data){
-    std::cout << element<< " ";
-}
-std::cout << std::endl;
-std::cout <<"--------------------"<< std::endl;
-std::cout << std::endl;
-SelectionSort(data);
-std::cout <<"--------------------"<< std::endl;
-for(auto element : data){
-    std::cout << element<< " ";
-}
-std::cout << std::endl;
+    std::vector<int> data;
+    for (size_t i = 0; i < 1000; ++i)
+    {
+        data.push_back(rand() % 101 );
+    }
+    for(auto element : data){
+        std::cout << element<< " ";
+    }
+    std::cout << std::endl;
+    std::cout <<"--------------------"<< std::endl;
+    std::cout << std::endl;
+    SelectionSort(data);
+    std::cout <<"--------------------"<< std::endl;
+    for(auto element : data){
+        std::cout << element<< " ";
+    }
+    std::cout << std::endl;
+    std::vector<int> tab{5,3,1,4,2};
+    EnhancedBubbleSort(tab);
+
+    for(auto const element : tab)
+    {
+        std::cout << element;
+    }
+    std::cout << std::endl;
+
+    std::vector<int> t{5,3,1,4,2};
+    int key = 9;
+    std::cout << "Search value :" << key << " in tab\n";
+    std::cout << "Linear Search result : "<< LinearSearch(t,key) << "\n";
+
+    key = 2;
+    std::cout << "Search value :" << key << " in tab\n";
+    std::cout << "Linear Search result : "<< LinearSearch(t,key) << "\n";
+
+    std::vector<int> vecteur = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    key = 4;
+    std::cout << "Search value :" << key << " in tab" << std::endl;
+    std::cout << "Binary Search result : "<< BinarySearch<int>(vecteur,key) << "\n";
+
+    std::vector<int> sousVecteur(vecteur.begin()+ key,vecteur.end());
+
+    // for(auto const element : sousVecteur)
+    // {
+    //     std::cout << element;
+    // }
+
     return 0;
 }

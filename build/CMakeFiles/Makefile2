@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /ssd/dev/DataStructure/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SearchSort.dir/all
+all: CMakeFiles/Sort.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SearchSort.dir/clean
+clean: CMakeFiles/Sort.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SearchSort.dir
+# Target rules for target CMakeFiles/Sort.dir
 
 # All Build rule for target.
-CMakeFiles/SearchSort.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SearchSort.dir/build.make CMakeFiles/SearchSort.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SearchSort.dir/build.make CMakeFiles/SearchSort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/ssd/dev/DataStructure/build/CMakeFiles --progress-num=1,2 "Built target SearchSort"
-.PHONY : CMakeFiles/SearchSort.dir/all
+CMakeFiles/Sort.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/ssd/dev/DataStructure/build/CMakeFiles --progress-num=1,2 "Built target Sort"
+.PHONY : CMakeFiles/Sort.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SearchSort.dir/rule: cmake_check_build_system
+CMakeFiles/Sort.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/DataStructure/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SearchSort.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Sort.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/DataStructure/build/CMakeFiles 0
-.PHONY : CMakeFiles/SearchSort.dir/rule
+.PHONY : CMakeFiles/Sort.dir/rule
 
 # Convenience name for target.
-SearchSort: CMakeFiles/SearchSort.dir/rule
-.PHONY : SearchSort
+Sort: CMakeFiles/Sort.dir/rule
+.PHONY : Sort
 
 # clean rule for target.
-CMakeFiles/SearchSort.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SearchSort.dir/build.make CMakeFiles/SearchSort.dir/clean
-.PHONY : CMakeFiles/SearchSort.dir/clean
+CMakeFiles/Sort.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/clean
+.PHONY : CMakeFiles/Sort.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,18 +1,19 @@
 #include <iostream>
 #include <vector>
+
 /*
-    Big O Notation : which is a notation used for measuring the time taken tor un algorithms
+    Big O Notation : which is a notation used for measuring the time taken for an algorithms
     Asymptotic Complexity :  (Time complexity or space complexity)
         . The runt-time of each algorithm will depend on several factors : 
             - The number and tupe of operations performed by the algorithm
-            - The number oe elements or nodes in a data structure
-            - How the elements or nodes are arraged (sorted or unsorted)
+            - The number of elements or nodes in a data structure
+            - How the elements or nodes are arranged (sorted or unsorted)
             - Also depend upon other factor such as computer archiecture and processor speed 
     ------------------------------
     Fast Bit O runtime calculations : 
      . O(1) is 'constant time'
         - Operations (such as Insert or Delete in some data structures) take the same time regardless of how many elements or nodes there are (n)
-        - There is no difference in the time taken to insert a value into an array of five elements comapred with inserting to inserting a value 
+        - There is no difference in the time taken to insert a value into an array of five elements compared with inserting to inserting a value 
         in an array of a million elements.
      . O(n) is 'linear time'
         - exemple a for loop that iterates through every element of an an array.
@@ -22,7 +23,6 @@
         - The runtime of the algorithm is directly proportional to n
         - One loop that prints each element of the data structure would take O(n)
      . O(logn) is 'logarithmic time'
-        - 
         - Runtime only increases fractionally as n incrases
         - log2(8) = 3 (inverse of the power; 2^3 = 8)
         - log2(8000) = 12.96
@@ -49,7 +49,7 @@
         - If we're searching for element that happends to be near the startd of the data structure of the element eare nearly sorted ;
         The algorithm will complete quickly
     . Worst case 
-        - if we're searching for an element happends to be eanr the end of the data structure of the data structure is completely unsorted,
+        - if we're searching for an element happends to be near the end of the data structure or the data structure is completely unsorted,
         the algorithm will take longer
     . Average cases 
         - If the element resides around the middle of the array.
@@ -82,7 +82,7 @@ Sort Algorithms :
 
     Bublle Sort
     Make repeated passes through a list of items,
-    echanging adgacent items if necessary.
+    echanging adjacent items if necessary.
     At each pass, the largest unsroted item will be pushed in tis proper place.
     Efficiency Average and worst O(n^2)
     Bubble Sort Explanation :
@@ -144,9 +144,7 @@ void Sort(std::vector<T>& tableau, size_t element)
         {
             if(tableau[i]< tableau[element])
             {
-                T temp = tableau[i];
-                tableau[i] = tableau[element];
-                tableau[element] = temp;
+                swap(tableau[element],tableau[i]);
             }
         }
         Sort(tableau, element+1);
@@ -167,9 +165,11 @@ void SelectionSort(std::vector<T>& tableau)
             }
         }
         swap(tableau[n],tableau[smallest]);
-        // T temp = tableau[smallest];
-        // tableau[smallest] = tableau[n];
-        // tableau[n] = temp;        
+        for(auto const element : tableau)
+        {
+            std::cout << element ;
+        }
+        std::cout <<"\n";
     }
 }
 
@@ -189,6 +189,11 @@ void BubbleSort(std::vector<T>& monTab)
                 swap(monTab[i],monTab[i+1]);
             }
         }
+        for(auto const element : monTab)
+        {
+            std::cout << element ;
+        }
+        std::cout << "\n";
     }
 }
 
@@ -212,6 +217,11 @@ void EnhancedBubbleSort(std::vector<T>& monTab)
             }
         }
         --lastUnsorted;
+        for(auto const element : monTab)
+        {
+            std::cout << element ;
+        }
+        std::cout << "\n";
     }
 }
 
@@ -259,74 +269,4 @@ int BinarySearch(const std::vector<T> tab, const T key)
         return middle + BinarySearch<T>(sousVecteur,key);
     }
     return -1;
-}
-int main(){
-
-
-/*-----------------TestSwapMethod----------------*/
-    int a = 1;
-    int b = 2;
-    std::cout << "a :"<<a<< " b :"<<b<<"\n";
-    swap<int>(a,b);
-    std::cout << "a :"<<a<< " b :"<<b<<"\n";
-    swap<int>(&a,&b);
-    std::cout << "a :"<<a<< " b :"<<b<<"\n";
-/*------------------------------------------*/
-    std::vector<int> monTab {4,5,6,1,3,9,4,8,2,7};
-    //Sort(monTab,0);
-    SelectionSort(monTab);
-    for(auto element : monTab){
-        std::cout << element<< " ";
-    }
-    std::cout << std::endl;
-
-/*------------------------------------------*/
-    std::vector<int> data;
-    for (size_t i = 0; i < 1000; ++i)
-    {
-        data.push_back(rand() % 101 );
-    }
-    for(auto element : data){
-        std::cout << element<< " ";
-    }
-    std::cout << std::endl;
-    std::cout <<"--------------------"<< std::endl;
-    std::cout << std::endl;
-    SelectionSort(data);
-    std::cout <<"--------------------"<< std::endl;
-    for(auto element : data){
-        std::cout << element<< " ";
-    }
-    std::cout << std::endl;
-    std::vector<int> tab{5,3,1,4,2};
-    EnhancedBubbleSort(tab);
-
-    for(auto const element : tab)
-    {
-        std::cout << element;
-    }
-    std::cout << std::endl;
-
-    std::vector<int> t{5,3,1,4,2};
-    int key = 9;
-    std::cout << "Search value :" << key << " in tab\n";
-    std::cout << "Linear Search result : "<< LinearSearch(t,key) << "\n";
-
-    key = 2;
-    std::cout << "Search value :" << key << " in tab\n";
-    std::cout << "Linear Search result : "<< LinearSearch(t,key) << "\n";
-
-    std::vector<int> vecteur = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    key = 4;
-    std::cout << "Search value :" << key << " in tab" << std::endl;
-    std::cout << "Binary Search result : "<< BinarySearch<int>(vecteur,key) << "\n";
-
-    std::vector<int> sousVecteur(vecteur.begin()+ key,vecteur.end());
-
-    // for(auto const element : sousVecteur)
-    // {
-    //     std::cout << element;
-    // }
-
-    return 0;
 }

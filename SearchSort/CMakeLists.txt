@@ -20,6 +20,7 @@ project(Project
 #     tree.cpp  
 #     )   
 
-add_executable( "${Project}"  main.cpp )
+
+add_executable( Sort  Sort.cpp )
 #to link the library with the executable
 # target_link_libraries("${Project}" PRIVATE treelib)

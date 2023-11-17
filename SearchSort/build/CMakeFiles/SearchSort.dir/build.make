@@ -69,28 +69,28 @@ include CMakeFiles/SearchSort.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SearchSort.dir/flags.make
 
-CMakeFiles/SearchSort.dir/main.cpp.o: CMakeFiles/SearchSort.dir/flags.make
-CMakeFiles/SearchSort.dir/main.cpp.o: /ssd/dev/DataStructure/SearchSort/main.cpp
-CMakeFiles/SearchSort.dir/main.cpp.o: CMakeFiles/SearchSort.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/ssd/dev/DataStructure/SearchSort/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SearchSort.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SearchSort.dir/main.cpp.o -MF CMakeFiles/SearchSort.dir/main.cpp.o.d -o CMakeFiles/SearchSort.dir/main.cpp.o -c /ssd/dev/DataStructure/SearchSort/main.cpp
+CMakeFiles/SearchSort.dir/Sort.cpp.o: CMakeFiles/SearchSort.dir/flags.make
+CMakeFiles/SearchSort.dir/Sort.cpp.o: /ssd/dev/DataStructure/SearchSort/Sort.cpp
+CMakeFiles/SearchSort.dir/Sort.cpp.o: CMakeFiles/SearchSort.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/ssd/dev/DataStructure/SearchSort/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SearchSort.dir/Sort.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SearchSort.dir/Sort.cpp.o -MF CMakeFiles/SearchSort.dir/Sort.cpp.o.d -o CMakeFiles/SearchSort.dir/Sort.cpp.o -c /ssd/dev/DataStructure/SearchSort/Sort.cpp
 
-CMakeFiles/SearchSort.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SearchSort.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /ssd/dev/DataStructure/SearchSort/main.cpp > CMakeFiles/SearchSort.dir/main.cpp.i
+CMakeFiles/SearchSort.dir/Sort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SearchSort.dir/Sort.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /ssd/dev/DataStructure/SearchSort/Sort.cpp > CMakeFiles/SearchSort.dir/Sort.cpp.i
 
-CMakeFiles/SearchSort.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SearchSort.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /ssd/dev/DataStructure/SearchSort/main.cpp -o CMakeFiles/SearchSort.dir/main.cpp.s
+CMakeFiles/SearchSort.dir/Sort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SearchSort.dir/Sort.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /ssd/dev/DataStructure/SearchSort/Sort.cpp -o CMakeFiles/SearchSort.dir/Sort.cpp.s
 
 # Object files for target SearchSort
 SearchSort_OBJECTS = \
-"CMakeFiles/SearchSort.dir/main.cpp.o"
+"CMakeFiles/SearchSort.dir/Sort.cpp.o"
 
 # External object files for target SearchSort
 SearchSort_EXTERNAL_OBJECTS =
 
-SearchSort: CMakeFiles/SearchSort.dir/main.cpp.o
+SearchSort: CMakeFiles/SearchSort.dir/Sort.cpp.o
 SearchSort: CMakeFiles/SearchSort.dir/build.make
 SearchSort: CMakeFiles/SearchSort.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/ssd/dev/DataStructure/SearchSort/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SearchSort"

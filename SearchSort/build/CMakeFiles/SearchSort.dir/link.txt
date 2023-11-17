@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/SearchSort.dir/main.cpp.o -o SearchSort 
+/usr/bin/c++ CMakeFiles/SearchSort.dir/Sort.cpp.o -o SearchSort 

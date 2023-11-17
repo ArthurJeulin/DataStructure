@@ -1,5 +1,6 @@
-CMakeFiles/SearchSort.dir/main.cpp.o: \
- /ssd/dev/DataStructure/SearchSort/main.cpp /usr/include/stdc-predef.h \
+CMakeFiles/SearchSort.dir/Sort.cpp.o: \
+ /ssd/dev/DataStructure/SearchSort/Sort.cpp /usr/include/stdc-predef.h \
+ /ssd/dev/DataStructure/SearchSort/Algorithms.h \
  /usr/include/c++/9/iostream \
  /usr/include/aarch64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/9/bits/os_defines.h \

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "SearchSort"
+			"path" : "Sort"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
+				"line" : 24,
 				"parent" : 0
 			}
 		]
@@ -45,7 +45,7 @@
 			]
 		}
 	],
-	"id" : "SearchSort::@6890427a1f51a3e7e1df",
+	"id" : "Sort::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -61,8 +61,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "SearchSort",
-	"nameOnDisk" : "SearchSort",
+	"name" : "Sort",
+	"nameOnDisk" : "Sort",
 	"paths" : 
 	{
 		"build" : ".",
@@ -83,7 +83,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "Sort.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

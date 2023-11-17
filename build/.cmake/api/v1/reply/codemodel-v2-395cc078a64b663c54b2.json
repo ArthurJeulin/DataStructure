@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "SearchSort::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SearchSort-Debug-5ab80f7a433f654cafde.json",
-					"name" : "SearchSort",
+					"id" : "Sort::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sort-Debug-298a47f7290295e8942f.json",
+					"name" : "Sort",
 					"projectIndex" : 0
 				}
 			]

@@ -1,3 +1,3 @@
-/ssd/dev/DataStructure/SearchSort/build/CMakeFiles/SearchSort.dir
+/ssd/dev/DataStructure/SearchSort/build/CMakeFiles/Sort.dir
 /ssd/dev/DataStructure/SearchSort/build/CMakeFiles/edit_cache.dir
 /ssd/dev/DataStructure/SearchSort/build/CMakeFiles/rebuild_cache.dir

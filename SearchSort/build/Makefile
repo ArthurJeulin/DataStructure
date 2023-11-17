@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SearchSort
+# Target rules for targets named Sort
 
 # Build rule for target.
-SearchSort: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SearchSort
-.PHONY : SearchSort
+Sort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Sort
+.PHONY : Sort
 
 # fast build rule for target.
-SearchSort/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SearchSort.dir/build.make CMakeFiles/SearchSort.dir/build
-.PHONY : SearchSort/fast
+Sort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/build
+.PHONY : Sort/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+Sort.o: Sort.cpp.o
+.PHONY : Sort.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SearchSort.dir/build.make CMakeFiles/SearchSort.dir/main.cpp.o
-.PHONY : main.cpp.o
+Sort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/Sort.cpp.o
+.PHONY : Sort.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+Sort.i: Sort.cpp.i
+.PHONY : Sort.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SearchSort.dir/build.make CMakeFiles/SearchSort.dir/main.cpp.i
-.PHONY : main.cpp.i
+Sort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/Sort.cpp.i
+.PHONY : Sort.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+Sort.s: Sort.cpp.s
+.PHONY : Sort.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SearchSort.dir/build.make CMakeFiles/SearchSort.dir/main.cpp.s
-.PHONY : main.cpp.s
+Sort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/Sort.cpp.s
+.PHONY : Sort.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SearchSort"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Sort"
+	@echo "... Sort.o"
+	@echo "... Sort.i"
+	@echo "... Sort.s"
 .PHONY : help
 
 

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/ssd/dev/DataStructure/SearchSort/main.cpp" "CMakeFiles/SearchSort.dir/main.cpp.o" "gcc" "CMakeFiles/SearchSort.dir/main.cpp.o.d"
+  "/ssd/dev/DataStructure/SearchSort/Sort.cpp" "CMakeFiles/SearchSort.dir/Sort.cpp.o" "gcc" "CMakeFiles/SearchSort.dir/Sort.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

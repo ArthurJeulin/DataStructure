@@ -1,0 +1,16 @@
+{
+    "name": "data-structure",
+    "version-string": "0.0.1",
+    "dependencies": [
+      "boost-system",
+      "boost-thread",
+      "fmt",
+      "range-v3",
+      "ms-gsl",
+      "catch2",
+      "cppitertools",
+      "glog"
+    ],
+
+    "builtin-baseline": "3426db05b996481ca31e95fff3734cf23e0f51bc"
+  }

@@ -57,10 +57,10 @@ RM = /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /ssd/dev/DataStructure/SearchSort
+CMAKE_SOURCE_DIR = /ssd/dev/data-structure
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /ssd/dev/DataStructure/build
+CMAKE_BINARY_DIR = /ssd/dev/data-structure/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -85,11 +85,56 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/DataStructure/build/CMakeFiles /ssd/dev/DataStructure/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/data-structure/build/CMakeFiles /ssd/dev/data-structure/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/DataStructure/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/data-structure/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +162,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Sort
+# Target rules for targets named data-structure
 
 # Build rule for target.
-Sort: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Sort
-.PHONY : Sort
+data-structure: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data-structure
+.PHONY : data-structure
 
 # fast build rule for target.
-Sort/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/build
-.PHONY : Sort/fast
+data-structure/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/data-structure.dir/build.make src/CMakeFiles/data-structure.dir/build
+.PHONY : data-structure/fast
 
-Sort.o: Sort.cpp.o
-.PHONY : Sort.o
+#=============================================================================
+# Target rules for targets named tree_test
 
-# target to build an object file
-Sort.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/Sort.cpp.o
-.PHONY : Sort.cpp.o
+# Build rule for target.
+tree_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_test
+.PHONY : tree_test
 
-Sort.i: Sort.cpp.i
-.PHONY : Sort.i
-
-# target to preprocess a source file
-Sort.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/Sort.cpp.i
-.PHONY : Sort.cpp.i
-
-Sort.s: Sort.cpp.s
-.PHONY : Sort.s
-
-# target to generate assembly for a file
-Sort.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/Sort.cpp.s
-.PHONY : Sort.cpp.s
+# fast build rule for target.
+tree_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/tree/CMakeFiles/tree_test.dir/build.make test/tree/CMakeFiles/tree_test.dir/build
+.PHONY : tree_test/fast
 
 # Help Target
 help:
@@ -160,11 +194,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... Sort"
-	@echo "... Sort.o"
-	@echo "... Sort.i"
-	@echo "... Sort.s"
+	@echo "... data-structure"
+	@echo "... tree_test"
 .PHONY : help
 
 

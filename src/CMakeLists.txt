@@ -4,12 +4,9 @@
 #      Created by Arthur JEULIN on 12/12/2023.
 # **********************************************************
 
-cmake_minimum_required(VERSION 3.27.5)
- 
-find_package(Boost REQUIRED COMPONENTS system thread)
-find_package (glog 0.6.0 REQUIRED)
-find_package(fmt CONFIG REQUIRED)
-find_package(cppitertools CONFIG REQUIRED)
+cmake_minimum_required(VERSION 3.18.4) 
+# find_package(Boost REQUIRED COMPONENTS thread)
+# find_package (glog 0.6.0 REQUIRED)
 
 add_library(data-structure SHARED)
 
@@ -21,11 +18,9 @@ add_subdirectory(linked-lists)
 #add_subdirectory(search-sort)
 add_subdirectory(tree)
 
-target_link_libraries(data-structure PRIVATE
-  glog::glog
-  fmt::fmt
-  cppitertools::cppitertools
-)
+# target_link_libraries(data-structure PRIVATE
+#   glog::glog
+# )
 
 #install the package in the correct folder
 if (MSVC)

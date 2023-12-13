@@ -4,12 +4,10 @@
 #      Created by Arthur JEULIN on 12/12/2023.
 # **********************************************************
 
-cmake_minimum_required(VERSION 3.27.5)
+cmake_minimum_required(VERSION 3.27.5)# Indiquez à CMake d'utiliser les outils de vcpkg
+#set(CMAKE_TOOLCHAIN_FILE "/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
-# Indiquez à CMake d'utiliser les outils de vcpkg
-set(CMAKE_TOOLCHAIN_FILE "/ssd/dev/vcpkg/scripts/buildsystems/vcpkg.cmake")
-
-set(CMAKE_CXX_COMPILER /usr/bin/g++-10)
+#set(CMAKE_CXX_COMPILER /usr/bin/g++-10)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 

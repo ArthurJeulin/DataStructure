@@ -4,9 +4,7 @@
 #      Created by Arthur JEULIN on 12/12/2023.
 # **********************************************************
 
-cmake_minimum_required(VERSION 3.27.5)
-
-set(test_name linked_lists_test)
+cmake_minimum_required(VERSION 3.27.5)set(test_name linked_lists_test)
 add_executable(${test_name} ${test_name}.cpp)
 
 target_include_directories(${test_name} PUBLIC  

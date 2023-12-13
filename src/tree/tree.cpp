@@ -37,7 +37,6 @@ Node* Tree::Find(int key){
         return 0;
     }
     return current;
-        
     }
 }
 void Tree::DisplayInOrder(Node *localRoot){

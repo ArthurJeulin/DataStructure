@@ -4,20 +4,20 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
-      - "CMakeLists.txt:16 (project)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:14 (project)"
     message: |
       The system is: Linux - 5.10.120-tegra - aarch64
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:16 (project)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:14 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: /usr/bin/g++-10 
+      Compiler: /usr/bin/c++ 
       Build flags: 
       Id flags:  
       
@@ -28,196 +28,193 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /ssd/dev/data-structure/build/CMakeFiles/3.27.5/CompilerIdCXX/a.out
+        /workspaces/data-structure/build/CMakeFiles/3.27.5/CompilerIdCXX/a.out
       
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:16 (project)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:14 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-l9kGOF"
-      binary: "/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-l9kGOF"
+      source: "/workspaces/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-p9aKML"
+      binary: "/workspaces/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-p9aKML"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_FLAGS_DEBUG: ""
       CMAKE_EXE_LINKER_FLAGS: ""
-      VCPKG_APPLOCAL_DEPS: "ON"
-      VCPKG_TARGET_TRIPLET: "arm64-linux"
-      Z_VCPKG_ROOT_DIR: "/ssd/dev/vcpkg"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-l9kGOF'
+        Change Dir: '/workspaces/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-p9aKML'
         
-        Run Build Command(s): /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_28184/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_28184.dir/build.make CMakeFiles/cmTC_28184.dir/build
-        make[1]: Entering directory '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-l9kGOF'
-        Building CXX object CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/g++-10   -std=gnu++2a   -v -o CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f832a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f832a.dir/build.make CMakeFiles/cmTC_f832a.dir/build
+        gmake[1]: Entering directory '/workspaces/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-p9aKML'
+        Building CXX object CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -std=gnu++20   -v -o CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o -c /opt/cmake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
-        COLLECT_GCC=/usr/bin/g++-10
+        COLLECT_GCC=/usr/bin/c++
         Target: aarch64-linux-gnu
-        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.5.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
-        gcc version 10.5.0 (Ubuntu 10.5.0-1ubuntu1~20.04) 
-        COLLECT_GCC_OPTIONS='-std=gnu++2a' '-v' '-o' 'CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
-         /usr/lib/gcc/aarch64-linux-gnu/10/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o -std=gnu++2a -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccgx4rEZ.s
-        GNU C++17 (Ubuntu 10.5.0-1ubuntu1~20.04) version 10.5.0 (aarch64-linux-gnu)
-        	compiled by GNU C version 10.5.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f832a.dir/'
+         /usr/lib/gcc/aarch64-linux-gnu/11/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /opt/cmake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f832a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -std=gnu++20 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccRhB1KM.s
+        GNU C++20 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (aarch64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "/usr/include/aarch64-linux-gnu/c++/10"
+        ignoring duplicate directory "/usr/include/aarch64-linux-gnu/c++/11"
         ignoring nonexistent directory "/usr/local/include/aarch64-linux-gnu"
-        ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/10/include-fixed"
-        ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/10/../../../../aarch64-linux-gnu/include"
+        ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         /usr/include/c++/10
-         /usr/include/aarch64-linux-gnu/c++/10
-         /usr/include/c++/10/backward
-         /usr/lib/gcc/aarch64-linux-gnu/10/include
+         /usr/include/c++/11
+         /usr/include/aarch64-linux-gnu/c++/11
+         /usr/include/c++/11/backward
+         /usr/lib/gcc/aarch64-linux-gnu/11/include
          /usr/local/include
          /usr/include/aarch64-linux-gnu
          /usr/include
         End of search list.
-        GNU C++17 (Ubuntu 10.5.0-1ubuntu1~20.04) version 10.5.0 (aarch64-linux-gnu)
-        	compiled by GNU C version 10.5.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+        GNU C++20 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (aarch64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        Compiler executable checksum: 1871ad634e35d60a139b59b89d5367dc
-        COLLECT_GCC_OPTIONS='-std=gnu++2a' '-v' '-o' 'CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
-         as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccgx4rEZ.s
-        GNU assembler version 2.34 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
-        COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/
-        LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-std=gnu++2a' '-v' '-o' 'CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
-        Linking CXX executable cmTC_28184
-        /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28184.dir/link.txt --verbose=1
-        /usr/bin/g++-10  -v CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_28184 
+        Compiler executable checksum: 3e6e780af1232722b47e0979fda82402
+        COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f832a.dir/'
+         as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccRhB1KM.s
+        GNU assembler version 2.38 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
+        COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_f832a
+        /opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f832a.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f832a 
         Using built-in specs.
-        COLLECT_GCC=/usr/bin/g++-10
-        COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/11/lto-wrapper
         Target: aarch64-linux-gnu
-        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.5.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
-        gcc version 10.5.0 (Ubuntu 10.5.0-1ubuntu1~20.04) 
-        COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/
-        LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_28184' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
-         /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLyF4wr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_28184 /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_28184' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
-        make[1]: Leaving directory '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-l9kGOF'
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f832a' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_f832a.'
+         /usr/lib/gcc/aarch64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5k1VJJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_f832a /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/11 -L/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/11/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/11/../../.. CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/11/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f832a' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_f832a.'
+        gmake[1]: Leaving directory '/workspaces/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-p9aKML'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:16 (project)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:14 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/usr/include/c++/10]
-          add: [/usr/include/aarch64-linux-gnu/c++/10]
-          add: [/usr/include/c++/10/backward]
-          add: [/usr/lib/gcc/aarch64-linux-gnu/10/include]
+          add: [/usr/include/c++/11]
+          add: [/usr/include/aarch64-linux-gnu/c++/11]
+          add: [/usr/include/c++/11/backward]
+          add: [/usr/lib/gcc/aarch64-linux-gnu/11/include]
           add: [/usr/local/include]
           add: [/usr/include/aarch64-linux-gnu]
           add: [/usr/include]
         end of search list found
-        collapse include dir [/usr/include/c++/10] ==> [/usr/include/c++/10]
-        collapse include dir [/usr/include/aarch64-linux-gnu/c++/10] ==> [/usr/include/aarch64-linux-gnu/c++/10]
-        collapse include dir [/usr/include/c++/10/backward] ==> [/usr/include/c++/10/backward]
-        collapse include dir [/usr/lib/gcc/aarch64-linux-gnu/10/include] ==> [/usr/lib/gcc/aarch64-linux-gnu/10/include]
+        collapse include dir [/usr/include/c++/11] ==> [/usr/include/c++/11]
+        collapse include dir [/usr/include/aarch64-linux-gnu/c++/11] ==> [/usr/include/aarch64-linux-gnu/c++/11]
+        collapse include dir [/usr/include/c++/11/backward] ==> [/usr/include/c++/11/backward]
+        collapse include dir [/usr/lib/gcc/aarch64-linux-gnu/11/include] ==> [/usr/lib/gcc/aarch64-linux-gnu/11/include]
         collapse include dir [/usr/local/include] ==> [/usr/local/include]
         collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
         collapse include dir [/usr/include] ==> [/usr/include]
-        implicit include dirs: [/usr/include/c++/10;/usr/include/aarch64-linux-gnu/c++/10;/usr/include/c++/10/backward;/usr/lib/gcc/aarch64-linux-gnu/10/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
+        implicit include dirs: [/usr/include/c++/11;/usr/include/aarch64-linux-gnu/c++/11;/usr/include/c++/11/backward;/usr/lib/gcc/aarch64-linux-gnu/11/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:16 (project)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/opt/cmake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:14 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-l9kGOF']
+        ignore line: [Change Dir: '/workspaces/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-p9aKML']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_28184/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_28184.dir/build.make CMakeFiles/cmTC_28184.dir/build]
-        ignore line: [make[1]: Entering directory '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-l9kGOF']
-        ignore line: [Building CXX object CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/g++-10   -std=gnu++2a   -v -o CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f832a/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_f832a.dir/build.make CMakeFiles/cmTC_f832a.dir/build]
+        ignore line: [gmake[1]: Entering directory '/workspaces/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-p9aKML']
+        ignore line: [Building CXX object CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -std=gnu++20   -v -o CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o -c /opt/cmake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/bin/g++-10]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [Target: aarch64-linux-gnu]
-        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.5.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
-        ignore line: [gcc version 10.5.0 (Ubuntu 10.5.0-1ubuntu1~20.04) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++2a' '-v' '-o' 'CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-        ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/10/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o -std=gnu++2a -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccgx4rEZ.s]
-        ignore line: [GNU C++17 (Ubuntu 10.5.0-1ubuntu1~20.04) version 10.5.0 (aarch64-linux-gnu)]
-        ignore line: [	compiled by GNU C version 10.5.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f832a.dir/']
+        ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/11/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /opt/cmake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f832a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -std=gnu++20 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -o /tmp/ccRhB1KM.s]
+        ignore line: [GNU C++20 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (aarch64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "/usr/include/aarch64-linux-gnu/c++/10"]
+        ignore line: [ignoring duplicate directory "/usr/include/aarch64-linux-gnu/c++/11"]
         ignore line: [ignoring nonexistent directory "/usr/local/include/aarch64-linux-gnu"]
-        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/10/include-fixed"]
-        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/10/../../../../aarch64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/11/../../../../aarch64-linux-gnu/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/include/c++/10]
-        ignore line: [ /usr/include/aarch64-linux-gnu/c++/10]
-        ignore line: [ /usr/include/c++/10/backward]
-        ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/10/include]
+        ignore line: [ /usr/include/c++/11]
+        ignore line: [ /usr/include/aarch64-linux-gnu/c++/11]
+        ignore line: [ /usr/include/c++/11/backward]
+        ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/11/include]
         ignore line: [ /usr/local/include]
         ignore line: [ /usr/include/aarch64-linux-gnu]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [GNU C++17 (Ubuntu 10.5.0-1ubuntu1~20.04) version 10.5.0 (aarch64-linux-gnu)]
-        ignore line: [	compiled by GNU C version 10.5.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+        ignore line: [GNU C++20 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (aarch64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [Compiler executable checksum: 1871ad634e35d60a139b59b89d5367dc]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++2a' '-v' '-o' 'CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-        ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccgx4rEZ.s]
-        ignore line: [GNU assembler version 2.34 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
-        ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/]
-        ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++2a' '-v' '-o' 'CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-        ignore line: [Linking CXX executable cmTC_28184]
-        ignore line: [/usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28184.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/g++-10  -v CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_28184 ]
+        ignore line: [Compiler executable checksum: 3e6e780af1232722b47e0979fda82402]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f832a.dir/']
+        ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccRhB1KM.s]
+        ignore line: [GNU assembler version 2.38 (aarch64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_f832a]
+        ignore line: [/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f832a.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f832a ]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/bin/g++-10]
-        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/11/lto-wrapper]
         ignore line: [Target: aarch64-linux-gnu]
-        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.5.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
-        ignore line: [gcc version 10.5.0 (Ubuntu 10.5.0-1ubuntu1~20.04) ]
-        ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/]
-        ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/10/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_28184' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-        link line: [ /usr/lib/gcc/aarch64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLyF4wr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_28184 /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/10 -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/10/../../.. CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
-          arg [/usr/lib/gcc/aarch64-linux-gnu/10/collect2] ==> ignore
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/11/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f832a' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_f832a.']
+        link line: [ /usr/lib/gcc/aarch64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5k1VJJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -z now -z relro -o cmTC_f832a /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/11 -L/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/11/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/11/../../.. CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/11/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crtn.o]
+          arg [/usr/lib/gcc/aarch64-linux-gnu/11/collect2] ==> ignore
           arg [-plugin] ==> ignore
-          arg [/usr/lib/gcc/aarch64-linux-gnu/10/liblto_plugin.so] ==> ignore
-          arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/10/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccLyF4wr.res] ==> ignore
+          arg [/usr/lib/gcc/aarch64-linux-gnu/11/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/11/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc5k1VJJ.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -237,19 +234,19 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_28184] ==> ignore
-          arg [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o]
-          arg [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o]
-          arg [/usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o]
-          arg [-L/usr/lib/gcc/aarch64-linux-gnu/10] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/10]
-          arg [-L/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu]
-          arg [-L/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib]
+          arg [cmTC_f832a] ==> ignore
+          arg [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/aarch64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/11/crtbeginS.o]
+          arg [-L/usr/lib/gcc/aarch64-linux-gnu/11] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/11]
+          arg [-L/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu]
+          arg [-L/usr/lib/gcc/aarch64-linux-gnu/11/../../../../lib] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/11/../../../../lib]
           arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
           arg [-L/lib/../lib] ==> dir [/lib/../lib]
           arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-          arg [-L/usr/lib/gcc/aarch64-linux-gnu/10/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/10/../../..]
-          arg [CMakeFiles/cmTC_28184.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-L/usr/lib/gcc/aarch64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/11/../../..]
+          arg [CMakeFiles/cmTC_f832a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -257,153 +254,23 @@ events:
           arg [-lc] ==> lib [c]
           arg [-lgcc_s] ==> lib [gcc_s]
           arg [-lgcc] ==> lib [gcc]
-          arg [/usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o]
-          arg [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
-        collapse obj [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/Scrt1.o] ==> [/usr/lib/aarch64-linux-gnu/Scrt1.o]
-        collapse obj [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o] ==> [/usr/lib/aarch64-linux-gnu/crti.o]
-        collapse obj [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o] ==> [/usr/lib/aarch64-linux-gnu/crtn.o]
-        collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/10] ==> [/usr/lib/gcc/aarch64-linux-gnu/10]
-        collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
-        collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/10/../../../../lib] ==> [/usr/lib]
+          arg [/usr/lib/gcc/aarch64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/11/crtendS.o]
+          arg [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/Scrt1.o] ==> [/usr/lib/aarch64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crti.o] ==> [/usr/lib/aarch64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu/crtn.o] ==> [/usr/lib/aarch64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/11] ==> [/usr/lib/gcc/aarch64-linux-gnu/11]
+        collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/11/../../../aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/11/../../../../lib] ==> [/usr/lib]
         collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
         collapse library dir [/lib/../lib] ==> [/lib]
         collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
         collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-        collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/10/../../..] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/11/../../..] ==> [/usr/lib]
         implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-        implicit objs: [/usr/lib/aarch64-linux-gnu/Scrt1.o;/usr/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/10/crtbeginS.o;/usr/lib/gcc/aarch64-linux-gnu/10/crtendS.o;/usr/lib/aarch64-linux-gnu/crtn.o]
-        implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/10;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib]
+        implicit objs: [/usr/lib/aarch64-linux-gnu/Scrt1.o;/usr/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/11/crtbeginS.o;/usr/lib/gcc/aarch64-linux-gnu/11/crtendS.o;/usr/lib/aarch64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/11;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib]
         implicit fwks: []
       
       
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
-      - "/ssd/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:861 (_find_package)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/FindBoost.cmake:2143 (find_package)"
-      - "/ssd/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:828 (_find_package)"
-      - "src/CMakeLists.txt:9 (find_package)"
-    checks:
-      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
-    directories:
-      source: "/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-NAKREG"
-      binary: "/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-NAKREG"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      VCPKG_APPLOCAL_DEPS: "ON"
-      VCPKG_TARGET_TRIPLET: "arm64-linux"
-      Z_VCPKG_ROOT_DIR: "/ssd/dev/vcpkg"
-    buildResult:
-      variable: "CMAKE_HAVE_LIBC_PTHREAD"
-      cached: true
-      stdout: |
-        Change Dir: '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-NAKREG'
-        
-        Run Build Command(s): /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f1de7/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_f1de7.dir/build.make CMakeFiles/cmTC_f1de7.dir/build
-        make[1]: Entering directory '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-NAKREG'
-        Building CXX object CMakeFiles/cmTC_f1de7.dir/src.cxx.o
-        /usr/bin/g++-10 -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++2a -o CMakeFiles/cmTC_f1de7.dir/src.cxx.o -c /ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-NAKREG/src.cxx
-        Linking CXX executable cmTC_f1de7
-        /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1de7.dir/link.txt --verbose=1
-        /usr/bin/g++-10 CMakeFiles/cmTC_f1de7.dir/src.cxx.o -o cmTC_f1de7 
-        /usr/bin/ld: CMakeFiles/cmTC_f1de7.dir/src.cxx.o: in function `main':
-        src.cxx:(.text+0x48): undefined reference to `pthread_create'
-        /usr/bin/ld: src.cxx:(.text+0x50): undefined reference to `pthread_detach'
-        /usr/bin/ld: src.cxx:(.text+0x58): undefined reference to `pthread_cancel'
-        /usr/bin/ld: src.cxx:(.text+0x64): undefined reference to `pthread_join'
-        collect2: error: ld returned 1 exit status
-        make[1]: *** [CMakeFiles/cmTC_f1de7.dir/build.make:99: cmTC_f1de7] Error 1
-        make[1]: Leaving directory '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-NAKREG'
-        make: *** [Makefile:127: cmTC_f1de7/fast] Error 2
-        
-      exitCode: 2
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/FindThreads.cmake:175 (_threads_check_lib)"
-      - "/ssd/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:861 (_find_package)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/FindBoost.cmake:2143 (find_package)"
-      - "/ssd/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:828 (_find_package)"
-      - "src/CMakeLists.txt:9 (find_package)"
-    checks:
-      - "Looking for pthread_create in pthreads"
-    directories:
-      source: "/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-FHUdHC"
-      binary: "/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-FHUdHC"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      VCPKG_APPLOCAL_DEPS: "ON"
-      VCPKG_TARGET_TRIPLET: "arm64-linux"
-      Z_VCPKG_ROOT_DIR: "/ssd/dev/vcpkg"
-    buildResult:
-      variable: "CMAKE_HAVE_PTHREADS_CREATE"
-      cached: true
-      stdout: |
-        Change Dir: '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-FHUdHC'
-        
-        Run Build Command(s): /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_466da/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_466da.dir/build.make CMakeFiles/cmTC_466da.dir/build
-        make[1]: Entering directory '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-FHUdHC'
-        Building CXX object CMakeFiles/cmTC_466da.dir/CheckFunctionExists.cxx.o
-        /usr/bin/g++-10   -DCHECK_FUNCTION_EXISTS=pthread_create -std=gnu++2a -o CMakeFiles/cmTC_466da.dir/CheckFunctionExists.cxx.o -c /ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-FHUdHC/CheckFunctionExists.cxx
-        Linking CXX executable cmTC_466da
-        /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_466da.dir/link.txt --verbose=1
-        /usr/bin/g++-10  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_466da.dir/CheckFunctionExists.cxx.o -o cmTC_466da  -lpthreads 
-        /usr/bin/ld: cannot find -lpthreads
-        collect2: error: ld returned 1 exit status
-        make[1]: *** [CMakeFiles/cmTC_466da.dir/build.make:99: cmTC_466da] Error 1
-        make[1]: Leaving directory '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-FHUdHC'
-        make: *** [Makefile:127: cmTC_466da/fast] Error 2
-        
-      exitCode: 2
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/FindThreads.cmake:176 (_threads_check_lib)"
-      - "/ssd/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:861 (_find_package)"
-      - "/usr/local/lib/python3.8/dist-packages/cmake/data/share/cmake-3.27/Modules/FindBoost.cmake:2143 (find_package)"
-      - "/ssd/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:828 (_find_package)"
-      - "src/CMakeLists.txt:9 (find_package)"
-    checks:
-      - "Looking for pthread_create in pthread"
-    directories:
-      source: "/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-F0VGmF"
-      binary: "/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-F0VGmF"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      VCPKG_APPLOCAL_DEPS: "ON"
-      VCPKG_TARGET_TRIPLET: "arm64-linux"
-      Z_VCPKG_ROOT_DIR: "/ssd/dev/vcpkg"
-    buildResult:
-      variable: "CMAKE_HAVE_PTHREAD_CREATE"
-      cached: true
-      stdout: |
-        Change Dir: '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-F0VGmF'
-        
-        Run Build Command(s): /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bea4e/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_bea4e.dir/build.make CMakeFiles/cmTC_bea4e.dir/build
-        make[1]: Entering directory '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-F0VGmF'
-        Building CXX object CMakeFiles/cmTC_bea4e.dir/CheckFunctionExists.cxx.o
-        /usr/bin/g++-10   -DCHECK_FUNCTION_EXISTS=pthread_create -std=gnu++2a -o CMakeFiles/cmTC_bea4e.dir/CheckFunctionExists.cxx.o -c /ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-F0VGmF/CheckFunctionExists.cxx
-        Linking CXX executable cmTC_bea4e
-        /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bea4e.dir/link.txt --verbose=1
-        /usr/bin/g++-10  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_bea4e.dir/CheckFunctionExists.cxx.o -o cmTC_bea4e  -lpthread 
-        make[1]: Leaving directory '/ssd/dev/data-structure/build/CMakeFiles/CMakeScratch/TryCompile-F0VGmF'
-        
-      exitCode: 0
 ...

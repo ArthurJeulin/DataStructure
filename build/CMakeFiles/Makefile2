@@ -54,51 +54,178 @@ RM = /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /ssd/dev/DataStructure/SearchSort
+CMAKE_SOURCE_DIR = /ssd/dev/data-structure
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /ssd/dev/DataStructure/build
+CMAKE_BINARY_DIR = /ssd/dev/data-structure/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Sort.dir/all
+all: src/all
+all: test/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: src/preinstall
+preinstall: test/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Sort.dir/clean
+clean: src/clean
+clean: test/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Sort.dir
+# Directory level rules for directory src
+
+# Recursive "all" directory target.
+src/all: src/CMakeFiles/data-structure.dir/all
+src/all: src/linked-lists/all
+src/all: src/tree/all
+.PHONY : src/all
+
+# Recursive "preinstall" directory target.
+src/preinstall: src/linked-lists/preinstall
+src/preinstall: src/tree/preinstall
+.PHONY : src/preinstall
+
+# Recursive "clean" directory target.
+src/clean: src/CMakeFiles/data-structure.dir/clean
+src/clean: src/linked-lists/clean
+src/clean: src/tree/clean
+.PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory src/linked-lists
+
+# Recursive "all" directory target.
+src/linked-lists/all:
+.PHONY : src/linked-lists/all
+
+# Recursive "preinstall" directory target.
+src/linked-lists/preinstall:
+.PHONY : src/linked-lists/preinstall
+
+# Recursive "clean" directory target.
+src/linked-lists/clean:
+.PHONY : src/linked-lists/clean
+
+#=============================================================================
+# Directory level rules for directory src/tree
+
+# Recursive "all" directory target.
+src/tree/all:
+.PHONY : src/tree/all
+
+# Recursive "preinstall" directory target.
+src/tree/preinstall:
+.PHONY : src/tree/preinstall
+
+# Recursive "clean" directory target.
+src/tree/clean:
+.PHONY : src/tree/clean
+
+#=============================================================================
+# Directory level rules for directory test
+
+# Recursive "all" directory target.
+test/all: test/search-sort/all
+test/all: test/tree/all
+.PHONY : test/all
+
+# Recursive "preinstall" directory target.
+test/preinstall: test/search-sort/preinstall
+test/preinstall: test/tree/preinstall
+.PHONY : test/preinstall
+
+# Recursive "clean" directory target.
+test/clean: test/search-sort/clean
+test/clean: test/tree/clean
+.PHONY : test/clean
+
+#=============================================================================
+# Directory level rules for directory test/search-sort
+
+# Recursive "all" directory target.
+test/search-sort/all:
+.PHONY : test/search-sort/all
+
+# Recursive "preinstall" directory target.
+test/search-sort/preinstall:
+.PHONY : test/search-sort/preinstall
+
+# Recursive "clean" directory target.
+test/search-sort/clean:
+.PHONY : test/search-sort/clean
+
+#=============================================================================
+# Directory level rules for directory test/tree
+
+# Recursive "all" directory target.
+test/tree/all: test/tree/CMakeFiles/tree_test.dir/all
+.PHONY : test/tree/all
+
+# Recursive "preinstall" directory target.
+test/tree/preinstall:
+.PHONY : test/tree/preinstall
+
+# Recursive "clean" directory target.
+test/tree/clean: test/tree/CMakeFiles/tree_test.dir/clean
+.PHONY : test/tree/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/data-structure.dir
 
 # All Build rule for target.
-CMakeFiles/Sort.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/ssd/dev/DataStructure/build/CMakeFiles --progress-num=1,2 "Built target Sort"
-.PHONY : CMakeFiles/Sort.dir/all
+src/CMakeFiles/data-structure.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/data-structure.dir/build.make src/CMakeFiles/data-structure.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/data-structure.dir/build.make src/CMakeFiles/data-structure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/ssd/dev/data-structure/build/CMakeFiles --progress-num=1,2,3 "Built target data-structure"
+.PHONY : src/CMakeFiles/data-structure.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Sort.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/DataStructure/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Sort.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/DataStructure/build/CMakeFiles 0
-.PHONY : CMakeFiles/Sort.dir/rule
+src/CMakeFiles/data-structure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/data-structure/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/data-structure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/data-structure/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/data-structure.dir/rule
 
 # Convenience name for target.
-Sort: CMakeFiles/Sort.dir/rule
-.PHONY : Sort
+data-structure: src/CMakeFiles/data-structure.dir/rule
+.PHONY : data-structure
 
 # clean rule for target.
-CMakeFiles/Sort.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sort.dir/build.make CMakeFiles/Sort.dir/clean
-.PHONY : CMakeFiles/Sort.dir/clean
+src/CMakeFiles/data-structure.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/data-structure.dir/build.make src/CMakeFiles/data-structure.dir/clean
+.PHONY : src/CMakeFiles/data-structure.dir/clean
+
+#=============================================================================
+# Target rules for target test/tree/CMakeFiles/tree_test.dir
+
+# All Build rule for target.
+test/tree/CMakeFiles/tree_test.dir/all: src/CMakeFiles/data-structure.dir/all
+	$(MAKE) $(MAKESILENT) -f test/tree/CMakeFiles/tree_test.dir/build.make test/tree/CMakeFiles/tree_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/tree/CMakeFiles/tree_test.dir/build.make test/tree/CMakeFiles/tree_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/ssd/dev/data-structure/build/CMakeFiles --progress-num=4,5 "Built target tree_test"
+.PHONY : test/tree/CMakeFiles/tree_test.dir/all
+
+# Build rule for subdir invocation for target.
+test/tree/CMakeFiles/tree_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/data-structure/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/tree/CMakeFiles/tree_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /ssd/dev/data-structure/build/CMakeFiles 0
+.PHONY : test/tree/CMakeFiles/tree_test.dir/rule
+
+# Convenience name for target.
+tree_test: test/tree/CMakeFiles/tree_test.dir/rule
+.PHONY : tree_test
+
+# clean rule for target.
+test/tree/CMakeFiles/tree_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/tree/CMakeFiles/tree_test.dir/build.make test/tree/CMakeFiles/tree_test.dir/clean
+.PHONY : test/tree/CMakeFiles/tree_test.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

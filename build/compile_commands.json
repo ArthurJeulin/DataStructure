@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/ssd/dev/DataStructure/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++-10   -g -o CMakeFiles/Sort.dir/Sort.cpp.o -c /ssd/dev/DataStructure/SearchSort/Sort.cpp",
-  "file": "/ssd/dev/DataStructure/SearchSort/Sort.cpp",
-  "output": "CMakeFiles/Sort.dir/Sort.cpp.o"
-}
-]

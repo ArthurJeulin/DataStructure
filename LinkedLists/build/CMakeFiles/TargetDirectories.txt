@@ -1,3 +1,0 @@
-/ssd/dev/DataStructure/LinkedLists/build/CMakeFiles/LinkedLists.dir
-/ssd/dev/DataStructure/LinkedLists/build/CMakeFiles/edit_cache.dir
-/ssd/dev/DataStructure/LinkedLists/build/CMakeFiles/rebuild_cache.dir
